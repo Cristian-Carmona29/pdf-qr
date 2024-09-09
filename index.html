@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF - QR</title>
+</head>
+<body>
+    <form id="pdfForm" enctype="multipart/form-data">
+        <input type="file" id="pdfFile" accept="application/pdf" />
+        <button type="submit">Subir y generar QR</button>
+    </form>
+
+    <div id="qrcode"></div>
+
+    <label for="format">Seleccionar formato de descarga:</label>
+    <select id="format">
+        <option value="png">PNG</option>
+        <option value="svg">SVG</option>
+        <option value="pdf">PDF</option>
+    </select>
+    <button id="downloadQR">Descargar QR</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="index.js"></script> 
+</body>
+</html>
